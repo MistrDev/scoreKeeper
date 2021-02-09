@@ -4,5 +4,5 @@ const p2Button = document.querySelector('#p2Button')
 let p1Score = 0;
 
 p1Button.addEventListener('click' , function() {
-    alert ('clicked!')
+    p1Score += 1;
 })
