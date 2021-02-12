@@ -43,6 +43,7 @@ winningScoreSelect.addEventListener('change', function(){
 // the logic for the reset button
 resetButton.addEventListener('click', reset)
 
+// a global function for the reset
 function  reset() {
     isGameOver = false;
     p1Score = 0;
