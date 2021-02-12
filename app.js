@@ -8,7 +8,7 @@ const winningScoreSelect = document.querySelector('#playto')
 // giving the scores for each player a value
 let p1Score = 0;
 let p2Score = 0;
-let winningScore = winningScoreSelect;
+let winningScore = 3;
 let isGameOver = false;
 
 // player ones button
@@ -33,22 +33,17 @@ p2Button.addEventListener('click' , function() {
    }
 })
 
-winningScoreSelect.addEventListener('click', function(){
-  winningScore = parseInt(this.value);  
+// the dropdown to select what to play to
+winningScoreSelect.addEventListener('change', function(){
+  winningScore = parseInt(this.value);
+  reset();  
 })
 
 
 // the logic for the reset button
-resetButton.addEventListener('click', function(){
-    isGameOver = false;
-    p1Score = 0;
-    p2Score = 0;
-    p1Display.textContent = 0;
-    p2Display.textContent = 0;
-})
+resetButton.addEventListener('click', reset)
 
-
-const reset = () => {
+function  reset() {
     isGameOver = false;
     p1Score = 0;
     p2Score = 0;
